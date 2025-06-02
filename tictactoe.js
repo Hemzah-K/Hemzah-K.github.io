@@ -32,7 +32,7 @@ let playerScore1 = 0; //score players
 let playerScore2 = 0;
 
 playButton.addEventListener('click', function() {
-    let soundFx = new Audio('tictactoeSFX/game-start-6104.mp3'); //sound effect
+    let soundFx = new Audio('game-start-6104.mp3'); //sound effect
     soundFx.play();
     gameStarted = true; //spel is begonnen
     feedback.textContent = "It's X's turn (^-^)"; //de beurt van X  
@@ -68,7 +68,7 @@ for (let i = 0; i < grids.length; i++) {
             checkWinner();
             currentPlayer = currentPlayer === "X" ? "O" : "X"; //wisselt speler
             feedback.textContent = "It's " + currentPlayer + "'s turn"; //feedback over wiens beurt het is
-            let soundFx = new Audio('tictactoeSFX/blip-131856.mp3');
+            let soundFx = new Audio('blip-131856.mp3');
             soundFx.play();
         }
     });
@@ -89,7 +89,7 @@ function checkWinner() {  //alle manieren waarop je kan winnen/winpatronen
     for (let i = 0; i < winPatterns.length; i++) {  //array van winpatronen hoe je kan winnen
         const [win1, win2, win3] = winPatterns[i]; //je hebt winpatroon 1 2 en 3
         if (win1.textContent === currentPlayer && win2.textContent === currentPlayer && win3.textContent === currentPlayer) { //feedback als je wint
-            let soundFx = new Audio('tictactoeSFX/good-6081.mp3');
+            let soundFx = new Audio('good-6081.mp3');
             soundFx.play();
             alert(currentPlayer + " has won this round! ~(≧▽≦)~"); //alert wanneer je wint
             
@@ -104,7 +104,7 @@ function checkWinner() {  //alle manieren waarop je kan winnen/winpatronen
             resetRound(); //reset de ronde
 
             if (playerScore1 === 5 || playerScore2 === 5) { //als een speler 5 punten heeft wint diegene
-                let soundFx = new Audio('tictactoeSFX/goodresult-82807.mp3');
+                let soundFx = new Audio('goodresult-82807.mp3');
                 soundFx.play();
                 alert(currentPlayer + " has won the game! (^-^)"); //winnaar
                 gameStarted = false; //spel is afgelopen
@@ -115,7 +115,7 @@ function checkWinner() {  //alle manieren waarop je kan winnen/winpatronen
     }
     
     if (!options.includes("")) { //als er geen lege grids zijn is het gelijkspel
-        let soundFx = new Audio('tictactoeSFX/classic-game-action-negative-25-224584.mp3');
+        let soundFx = new Audio('classic-game-action-negative-25-224584.mp3');
         soundFx.play();
         alert("It's a draw (⩾﹏⩽)");
         resetRound(); //reset bord voor nieuwe ronde
