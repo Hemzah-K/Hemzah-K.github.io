@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: white;
+    line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #ff0000;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-family: cursive;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.5);
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #ff0000;
+    text-shadow: 2px 2px 4px white, -2px -2px 4px white, 2px -2px 4px white, -2px 2px 4px white;
+    margin-bottom: 20px;
+}
+
+
+section {
+    max-width: 800px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.4);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+
+/*tablet*/
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+
+/*telefoon*/
+@media (max-width: 480px) {
+    header {
+        padding: 10px 0;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/*pc*/
+@media (min-width: 1025px) {
+    .home-content {
+        text-align: center;
+        max-width: none;
+        margin: 0 auto;
+    }
+}
+
+/*...*/
+
+.tictactoeIMG {
+    width: 400px;
+}
+
+.textREDone {
+    color: #ff0000;
+
+}
+
+.textREDtwo {
+    color: #ff0000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+ 
+.container {
+    max-width: 800px;
+    background: black;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+ 
+
+ 
+h1, h2 {
+    margin: 5px;
+}
+ 
+h3 {
+    border-bottom: 2px solid darkred;
+    padding-bottom: 5px;
+}
+ 
+p, ul {
+    line-height: 1.5;
+}
+ 
+ul {
+    padding-left: 20px;
+}
+ 
+.contact p, .languages p {
+    font-weight: bold;
+}
+ 
+.home {
+    max-width: 850px; 
+    padding: 40px; 
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px; 
+    box-shadow: 0px 4px 15px rgba(255, 0, 0, 0.4);
+    text-align: center;
+}
+
+.home-content h1 {
+    font-size: 2.5em; 
+}
+
+.home-content h3 {
+    font-size: 2em; 
+}
+
+.home-content p {
+    font-size: 1.2em;
+}
+
+.projects {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(255, 0, 0, 0.5);
+    text-align: center;
+}
+
+.projects-content h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7);
+}
+
+.projects-content h3 {
+    font-size: 2em;
+    color: #ff0000;
+    text-shadow: 2px 2px 6px white;
+    margin-bottom: 20px;
+}
+
+.projects-content p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+}
+
+.projects-content img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects-content img:hover {
+    transform: scale(1.05);
+}
+
+
+.textREDone, .textREDtwo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff0000;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8), 
+                 -2px -2px 5px rgba(255, 0, 0, 0.8);
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .textREDone, .textREDtwo {
+        font-size: 1.3em; 
+        text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.7);
+    }
+}
+
+.foto {
+    width: 200px;
+    margin-left: 20px;
+}
