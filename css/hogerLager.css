@@ -1,0 +1,180 @@
+body {
+    background-image: url('/higherLower-Images/HogerLagerAchtergrond.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;;
+    image-rendering: auto;
+}
+
+
+/* Dit is allemaal om de titel te laten bewegen.*/
+.Title{
+    margin-top: 0;
+    position: relative; /*relatief zorgt ervoor dat hij uberhaupt kan bewegen*/
+    color: #fff; /* kleur van titel */
+    text-shadow: 
+        0 1px 0 rgba(0, 0, 0, 0.2), 
+        0 2px 0 rgba(0, 0, 0, 0.3), 
+        0 3px 0 rgba(0, 0, 0, 0.4), 
+        0 4px 0 rgba(0, 0, 0, 0.5), 
+        0 5px 0 rgba(0, 0, 0, 0.6), 
+        0 6px 5px rgba(0, 0, 0, 0.7); /* diepte*/
+    
+    font-size:  60px;
+    padding: 0px 0px 50px 0px;
+    display: flex;
+    justify-content: center;
+    animation: moving 1s infinite;  /*animatie duurt 1seconde en loopt oneindig*/
+}
+@keyframes moving { /*animatie van titel*/
+    0%, 100% {
+      top: 0px;
+    }
+    50% {
+      top: 45px;
+    }
+}
+
+.livesText:hover{
+    color: #c53307;
+}
+.coinsText:hover{
+    color: #d8bd0c;
+}
+
+
+.diceNumber{
+    display: flex;           /*flex centreert het*/
+    justify-content: center; /* Centreert de tekst horizontaal */
+    align-items: center;     /* Centreert de tekst verticaal */
+
+    color:aliceblue;
+    font-size: 60px;
+    margin-left: -30px;
+}
+.diceNumber img{        /*door img achter de class te zetten kan je specifiek dingen voor alleen img aanpassen (hoeft dus niet apart een class aangemaakt worden hiervoor)*/
+    max-width: 100px; /* Stel een breedte in zodat de afbeelding niet te groot is */
+    max-height: 100px;
+    margin-right: -65px;
+}
+
+.iconLeft {
+    display: flex;              /*flex centreert het*/
+    align-items: top;
+    margin-right: auto;
+    font-size: xx-large;
+    color: aliceblue;
+    font-family: cursive;
+}
+.iconLeft img {         /*door img achter de class te zetten kan je specifiek dingen voor alleen img aanpassen (hoeft dus niet apart een class aangemaakt worden hiervoor)*/
+    margin-right: 10px; /* ruimte tussen de afbeelding en tekst */
+    max-width: 50px; /* breedte*/
+    max-height: 50px;
+}
+
+.iconRight {
+    display: flex;   /*flex centreert het*/
+    align-items: top;
+    margin-left: auto;
+    font-size: xx-large;
+    color: aliceblue;
+    font-family: cursive;
+}
+.iconRight img {        /*door img achter de class te zetten kan je specifiek dingen voor alleen img aanpassen (hoeft dus niet apart een class aangemaakt worden hiervoor)*/
+    margin-right: 10px; /* ruimte tussen de afbeelding en tekst */
+    max-width: 50px; /* breedte */
+    max-height: 50px;
+}
+
+.mainContainer {
+    display: grid; /*dit is een soort tabel, 3 kolonmen, een voor lives, coins en titel*/
+    grid-template-columns: repeat(3, 1fr);  /*maak 3 kolommen met 1 ruimte ertussen ofz*/
+    padding: 50px 50px 0px;
+    gap: 50px; /*ruimte tussen de kolommen, andere soort padding*/
+}
+
+
+.controlButtons{
+    display: flex;   /*flex centreert het*/
+    flex-direction: column; /*zet de knoppen onderelkaar*/
+}
+.controlButtons button{
+    width: 200px;       /*breedte*/
+    height: 50px;       /*hoogte*/
+    font-size: 25px;    /*tekstgrootte*/
+    border-style: double;   
+    border-radius: 35px;
+    font-family: cursive; /*font enz*/
+    background-color: white;
+    color: black; 
+    opacity: 0.9; /* transparant */
+    transition: background-color 0.3s ease, color 0.3s ease; /*transitie van de knop*/
+
+    margin: 0px auto 10px;   /* Voeg ruimte toe tussen de knoppen */
+}.controlButtons button:not(:disabled):hover{   /*als de button NIET disabled is en je hovert erover*/
+    cursor: pointer;    /*cursor vorm ding, komt alleen als hij is enabled*/
+    color: rgb(226, 213, 212);          /*tekstkleur*/
+    background-color: hwb(3 38% 7%);    /*achtergrond kleur*/
+    box-shadow: 0 0 50px red /* dit is een glow */
+}.controlButtons button:not(:disabled):active{  /*als de button NIET disabled is en je klikt erop*/
+    color: rgb(255, 255, 255);
+    background-color: rgb(228, 11, 0);
+}.controlButtons button:disabled{   /*als de button disabled is*/
+    color: rgb(215, 212, 212);
+}
+
+.feedbackTekst{
+    display: flex;   /*flex centreert het*/
+    justify-content: center; /* Centreert de tekst horizontaal */
+    font-size: xx-large;
+    color: aliceblue;
+    font-family: cursive;
+}
+
+/* .feedbackTekst:hover{
+    opacity: 0.9;
+    transition: color 0.3s ease, color 0.3s ease;
+    color: #c50707;
+}
+ */
+
+ .audio {
+    width: 300px; /* Breder maken zodat het beter zichtbaar is */
+    background-color: #ff0000; /* kleur */
+    border: 2px solid #ff0000; /* Kleur van de rand */
+    border-radius: 50px; /* Hoekjes vorm, ik heb het rond gemaakt */  
+}
+
+.audio::-webkit-media-controls-panel {
+    background-color: rgb(138, 0, 0); /* Achtergrondkleur*/
+    color: rgb(194, 0, 0); /* Tekstkleur */
+}
+
+.audio-control {
+    position: absolute; /* absolute positionering */
+    left: 20px; /* Afstand vanaf de linkerkant */
+    bottom: 30px; /* Afstand vanaf de onderkant */
+}
+
+.audioTekst {
+    visibility: hidden;
+    width: 200px; /* breedte */
+    background-color: black; /* tekst kleur */
+    color: #fff; /* Tekstkleur */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 100%; /* zet het tekst onder de geluid dinges */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.audio-control:hover .audioTekst { /*ik weet niet meer wat het is its over*/
+    visibility: visible;
+}
+
+.home-btnHigherLower {
+    color: red;
+    font-size: 20px;
+}

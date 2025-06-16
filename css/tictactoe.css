@@ -1,0 +1,200 @@
+.home-btnTicTacToe { /*de href die naar home gaat*/
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    font-size: 25px;   
+}
+
+.home-btnTicTacToe:hover {
+    color: rgb(255, 96, 96);
+}
+
+h1 {
+    color: #ff0000; /*tic tac toe tekst kleur*/
+}
+
+body {
+    font-family: cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    background-color: #000000;
+    flex-direction: column;
+}
+
+/*de grid*/
+.spelbord {
+    text-align: center;
+}
+
+/*grid*/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+    gap: 5px;
+    margin: 20px;
+}
+
+/*de blokken in de grid ik weet de naam niet*/
+.gridblockOne, .gridblockTwo, .gridblockThree, .gridblockFour, .gridblockFive, .gridblockSix, .gridblockSeven, .gridblockEight, .gridblockNine {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 135, 135);
+    border: 3px solid #ff0000;
+    display: flex;
+    justify-content: center; /*grid gaat naar het midden*/
+    align-items: center;
+    cursor: pointer; /*cursor*/
+}
+
+/*hover*/
+.gridblockOne:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockTwo:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockThree:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockFour:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockFive:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockSix:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockSeven:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockEight:hover {
+    background-color: #eb5757;
+    box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.gridblockNine:hover {
+    background-color: #eb5757;
+     box-shadow: 0 0 50px red /* dit is een glow */
+}
+
+.pvp { /*knop voor 1 tegen 1*/
+    width: 200px;       /*breedte*/
+    height: 65px;       /*hoogte*/
+    font-size: 30px;    /*tekstgrootte*/
+    border-style: double;   
+    border-radius: 35px;
+    font-family: cursive; /*font enz*/
+    background-color: white;
+    opacity: 0.9; /*opacity*/
+    transition: background-color 0.3s ease, color 0.3s ease; /*rransitie*/
+    background-color: #ff0000;
+    cursor: pointer;    /*cursor*/
+    color: rgb(226, 213, 212);          /*kleur*/
+    box-shadow: 0 0 50px red /*glow*/
+}
+
+.pvp:hover {
+    background-color: rgb(255, 96, 96);
+}
+
+div {
+    transform:
+      perspective(105em)
+      rotateX(18deg);
+    box-shadow:
+      rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+      rgba(19, 26, 32, 0.08) 0px 35px 75px -35px;
+    border-radius: 10px;
+
+    border-color:
+      rgb(213, 220, 226)
+      rgb(213, 220, 226)
+      rgb(184, 194, 204);
+}
+
+/*hover voor grid blokken*/
+.gridblockOne:hover,
+.gridblockTwo:hover,
+.gridblockThree:hover,
+.gridblockFour:hover,
+.gridblockFive:hover,
+.gridblockSix:hover,
+.gridblockSeven:hover,
+.gridblockEight:hover,
+.gridblockNine:hover {
+    background-color: #eb5757;  /*kleur voor de hover ding*/
+    box-shadow: 0 0 50px red;   /*Glow*/
+    transform: translateY(-10px); /*zweef*/
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /*fade ding*/
+}
+
+.pvp {
+    transform:
+      perspective(105em)
+      rotateX(18deg);
+}
+
+.pvp:hover {
+    background-color: #eb5757;  /*hover kleur*/
+    box-shadow: 0 0 50px red;   /*Glow*/
+    transform: translateY(-10px); /*het zweeft spoort van*/
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /*glow*/
+}
+
+/* 
+.turn-display {
+    color: white; 
+    font-size: 20px; 
+    text-align: center; 
+    margin-top: 20px; 
+} */
+
+/*x en o in grids*/
+.gridblockOne, .gridblockTwo, .gridblockThree, 
+.gridblockFour, .gridblockFive, .gridblockSix, 
+.gridblockSeven, .gridblockEight, .gridblockNine {
+    font-size: 60px; /*groter*/
+    color: red; /*kleur*/
+}
+
+.playerNames { 
+    font-size: 27px;
+    color: rgb(255, 0, 0);
+}
+
+.playerName2 {
+    /* padding-left:600px; */
+    transition: padding-left 1.2s ease; /* Animatie */
+}
+
+.score { 
+    font-size: 18px;
+    color: rgb(255, 0, 0);
+}
+
+.score2 {
+    /* padding-left:600px; */
+    transition: padding-left 1.2s ease; /* Animatie */
+}
