@@ -1,32 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contactinformatie</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Contactinformatie – Hemzah Kariman</title>
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <nav>
             <ul class="navbar">
-                <li><a href="home.html">Over mij</a></li>
+                <li><a href="index.html">Over mij</a></li>
                 <li><a href="about.html">Cv</a></li>
                 <li><a href="projects.html">Projecten</a></li>
-                <li><a href="cv.html">Contactinformatie</a></li>
+                <li><a href="cv.html" class="active" aria-current="page">Contactinformatie</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="cv">
-                <div class="cv-content">
-                    <h1>Hemzah Kariman</h1>
-                    <h3>Contactinformatie</h3>
-                    <p class="typing-text">☏ 06 81748035</p>
-                    <p>✉ hemzahkariman070@gmail.com</p>
-                </div>
+    <main class="wrap">
+        <h1 class="page-title">Contactinformatie</h1>
+        <p class="page-lead">Heeft u een vraag, een stage voor mij of wil je meer weten over mijn projecten? Neem gerust contact op.</p>
+
+        <div class="two-col">
+            <section class="card contact-list">
+                <div class="contact-item"><div><span>E-mail</span><strong><a href="mailto:hemzahkariman070@gmail.com">hemzahkariman070@gmail.com</a></strong></div></div>
+                <div class="contact-item"><div><span>Telefoon</span><strong><a href="tel:+31641836766">06 41836766</a></strong></div></div>
+                <div class="contact-item"><div><span>Woonplaats</span><strong>Den Haag</strong></div></div>
+                <div class="contact-item"><div><span>Opleiding</span><strong>ROC Mondriaan, Delft</strong></div></div>
+            </section>
+
+            <section class="card">
+                <h3>Stuur een bericht</h3>
+                <form class="form" id="contactForm">
+                    <label>Je naam <input type="text" id="naam" required></label>
+                    <label>Onderwerp <input type="text" id="onderwerp" value="Bericht via je portfolio"></label>
+                    <label>Bericht <textarea id="bericht" required></textarea></label>
+                    <button class="btn" type="submit">Verstuur via e-mail</button>
+                </form>
+            </section>
+        </div>
+
+        <section class="block">
+            <h2>Goed om te weten</h2>
+            <div class="grid-3">
+                <div class="card"><h3>Beschikbaarheid</h3><p>Ik zoek een stage dat ik kan combineren met mijn opleiding.</p></div>
+                <div class="card"><h3>Reactietijd</h3><p>Ik probeer binnen enkele dagen te antwoorden.</p></div>
+                <div class="card"><h3>Mijn cv</h3><p>Bekijk mijn cv en sla het op als PDF. <a href="about.html">Naar het cv</a></p></div>
+            </div>
         </section>
     </main>
-</body>     
+
+    <footer class="site-footer">© 2026 Hemzah Kariman · Software Developer in opleiding</footer>
+
+    <script>
+        // Opent je e-mailprogramma met het bericht al ingevuld
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            var naam = document.getElementById("naam").value;
+            var onderwerp = document.getElementById("onderwerp").value;
+            var bericht = document.getElementById("bericht").value;
+            var body = bericht + "\n\nMet vriendelijke groet,\n" + naam;
+            window.location.href = "mailto:hemzahkariman070@gmail.com?subject=" +
+                encodeURIComponent(onderwerp) + "&body=" + encodeURIComponent(body);
+        });
+    </script>
+</body>
 </html>

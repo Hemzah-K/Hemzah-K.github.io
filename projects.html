@@ -1,37 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projecten</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Projecten – Hemzah Kariman</title>
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <nav>
             <ul class="navbar">
-                <li><a href="home.html">Over mij</a></li>
+                <li><a href="index.html">Over mij</a></li>
                 <li><a href="about.html">Cv</a></li>
-                <li><a href="projects.html">Projecten</a></li>
+                <li><a href="projects.html" class="active" aria-current="page">Projecten</a></li>
                 <li><a href="cv.html">Contactinformatie</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <section class="projects">
-            <div class="projects-content">
-                <h1>Hemzah Kariman</h1>
-                <h3>Projecten</h3>
-                <p class="textREDone">Hoger lager</p>
-                <a href="hogerLager.html"><img class="higherLowerIMG" src="images/OIP.jpg"></a>
-                <p class="textREDone">Gemaakt met HTML, JavaScript en css</p>
-                <br>
-                <p class="textREDtwo">Build a game - Tic Tac Toe</p>   
-                <a href="tictactoe.html"><img class="tictactoeIMG" src="images/tic-tac-toe-game-vector-illustration-icon-template-design_665655-4541.jpg"></a>
-                <p class="textREDone">Gemaakt met HTML, JavaScript en css</p>
-            </div>
+    <main class="wrap">
+        <h1 class="page-title">Projecten</h1>
+        <p class="page-lead">Een selectie van wat ik tijdens mijn opleiding en in mijn vrije tijd heb gemaakt. Bij elk project lees je wat het is, welke technieken ik gebruikte en wat erin zit.</p>
+
+        <div class="project-grid">
+            <article class="card project">
+                <img src="images/OIP.jpg" alt="Voorbeeld van het spel Hoger of lager">
+                <div>
+                    <h3>Hoger of lager</h3>
+                    <p class="meta">Spel in de browser</p>
+                    <p>Een spel waarin je met de knoppen Higher en Lower speelt. Je hebt levens en munten, er staat een score in beeld en er speelt achtergrondmuziek.</p>
+                    <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                    <h4>Wat erin zit</h4>
+                    <ul class="check-list">
+                        <li>Levens en munten die tijdens het spel veranderen.</li>
+                        <li>Een score en tekst die laat zien hoe het gaat.</li>
+                        <li>Achtergrondmuziek die je zelf kunt bedienen.</li>
+                    </ul>
+                    <a class="btn" href="hogerLager.html">Speel het spel</a>
+                </div>
+            </article>
+
+            <article class="card project">
+                <img src="images/tic-tac-toe-game-vector-illustration-icon-template-design_665655-4541.jpg" alt="Illustratie van het spel Tic Tac Toe">
+                <div>
+                    <h3>Tic Tac Toe</h3>
+                    <p class="meta">Spel voor twee spelers</p>
+                    <p>Boter-kaas-en-eieren voor twee spelers. Je ziet de namen van beide spelers en de score, en speelt op een bord met negen vakjes.</p>
+                    <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                    <h4>Wat erin zit</h4>
+                    <ul class="check-list">
+                        <li>Een bord met negen vakjes.</li>
+                        <li>Namen en score voor elke speler.</li>
+                        <li>Een Play-knop om een spel te starten.</li>
+                    </ul>
+                    <a class="btn" href="tictactoe.html">Speel het spel</a>
+                </div>
+            </article>
+
+            <article class="card project">
+                <div>
+                    <h3>Deze portfolio-website</h3>
+                    <p class="meta">Website</p>
+                    <p>Mijn eigen website met een introductie, cv, projecten en contactgegevens.</p>
+                    <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+                    <h4>Wat erin zit</h4>
+                    <ul class="check-list">
+                        <li>Meerdere pagina's met één stijlbestand.</li>
+                        <li>Een ontwerp dat op telefoon, tablet en computer werkt.</li>
+                        <li>Een cv dat je kunt opslaan als PDF.</li>
+                    </ul>
+                    <a class="btn ghost" href="index.html">Naar de startpagina</a>
+                </div>
+            </article>
+        </div>
+
+        <section class="block card cta">
+            <h3>Meer projecten volgen</h3>
+            <p>Ik werk aan nieuwe projecten tijdens mijn opleiding en voeg ze hier toe.</p>
+            <a class="btn" href="cv.html">Neem contact op</a>
         </section>
     </main>
+
+    <footer class="site-footer">© 2026 Hemzah Kariman · Software Developer in opleiding</footer>
 </body>
 </html>

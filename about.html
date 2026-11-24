@@ -3,62 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cv</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Cv – Hemzah Kariman</title>
+    <link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-    <header>
+    <header class="site-header">
         <nav>
             <ul class="navbar">
-                <li><a href="home.html">Over mij</a></li>
-                <li><a href="about.html">Cv</a></li>
+                <li><a href="index.html">Over mij</a></li>
+                <li><a href="about.html" class="active" aria-current="page">Cv</a></li>
                 <li><a href="projects.html">Projecten</a></li>
                 <li><a href="cv.html">Contactinformatie</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <header>
-            <h1>Hemzah Kariman</h1>
-            <h2>Software Developer</h2>
-        </header>
- 
-        <section class="contact">
-            <p>Email: <a href="mailto:hemzahkariman070@gmail.com">hemzahkariman070@gmail.com</a></p>
-            <p>Telefoon: <a href="tel:+31681748035">+31 0681748035</a></p>
-            <p>Adres: Steenzicht 131, 2543AC Den Haag</p>
-            <img class="foto" src="/images/Media.png" alt="">
-        </section>
- 
-        <section class="summary">
-            <h3>Samenvatting</h3>
-            <p>Student met grote interesse in uw organisatie. Ik zoek werk dat ik kan combineren met mijn opleiding en wat raakvlakken heeft. Ik ben gedreven, enthousiast en wil graag mijn vaardigheden verder ontwikkelen.</p>
+    <main class="wrap">
+        <section class="card cv-top">
+            <img class="foto" src="images/Media.png" alt="Portretfoto van Hemzah Kariman">
+            <div>
+                <h1>Hemzah Kariman</h1>
+                <h2>Student Software Developer (MBO)</h2>
+                <ul class="cv-contact">
+                    <li><strong>E-mail</strong> <a href="mailto:hemzahkariman070@gmail.com">hemzahkariman070@gmail.com</a></li>
+                    <li><strong>Telefoon</strong> <a href="tel:+31681748035">+31 6 81748035</a></li>
+                    <li><strong>Adres</strong> Steenzicht 131, 2543 AC Den Haag</li>
+                </ul>
+                <button class="btn no-print" onclick="window.print()">Opslaan als PDF / printen</button>
+            </div>
         </section>
 
- 
-        <section class="skills">
-            <h3>Vaardigheden</h3>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-            </ul>
-        </section>
- 
-        <section class="education">
-            <h3>Opleiding</h3>
-            <p><strong>ROC Mondriaan</strong> - Delft (06/2024 - Heden) - ICT</p>
-            <p><strong>Zuid-West College</strong> - Den Haag (08/2020 - 05/2024) - Mavo diploma</p>
-        </section>
- 
-        <section class="languages">
-            <h3>Talen</h3>
-            <p>Nederlands: Eerste taal</p>
-            <p>Engels: Gevorderd</p>
-        </section>
-    </div>
-    
+        <div class="cv-grid">
+            <aside class="cv-col">
+                <section class="card">
+                    <h3>Programmeertalen</h3>
+                    <!-- Pas de percentages aan naar hoe goed jij ze echt beheerst -->
+                    <div class="skill"><span>HTML <small>Goed</small></span><div class="bar"><i style="width:85%"></i></div></div>
+                    <div class="skill"><span>CSS <small>Goed</small></span><div class="bar"><i style="width:80%"></i></div></div>
+                    <div class="skill"><span>JavaScript <small>Basis+</small></span><div class="bar"><i style="width:60%"></i></div></div>
+                    <div class="skill"><span>PHP <small>Basis</small></span><div class="bar"><i style="width:45%"></i></div></div>
+                </section>
+                <section class="card">
+                    <h3>Persoonlijke vaardigheden</h3>
+                    <ul class="tags"><li>Gedreven</li><li>Enthousiast</li><li>Leergierig</li><li>Samenwerken</li><li>Probleemoplossend</li></ul>
+                </section>
+                <section class="card">
+                    <h3>Talen</h3>
+                    <p><strong>Nederlands</strong> – moedertaal</p>
+                    <p><strong>Engels</strong> – gevorderd</p>
+                </section>
+            </aside>
+
+            <div class="cv-col">
+                <section class="card">
+                    <h3>Profiel</h3>
+                    <p>Ik ben een 17-jarige student Software Developer uit Den Haag. Ik bouw graag websites en kleine games en leer het liefst door dingen zelf te maken. Ik ben gedreven en enthousiast en wil mijn vaardigheden verder ontwikkelen.</p>
+                    <p style="margin-top:10px">Ik zoek een (bij)baan die ik kan combineren met mijn opleiding en die aansluit op IT en software. Zo kan ik wat ik op school leer in de praktijk brengen.</p>
+                </section>
+                <section class="card">
+                    <h3>Opleiding</h3>
+                    <ul class="timeline">
+                        <li><span class="period">06/2024 – heden</span><h4>MBO Software Developer</h4><p>ROC Mondriaan, Delft (locatie Brasserskade) – ICT. Eerste jaar, met aandacht voor programmeren en webontwikkeling.</p></li>
+                        <li><span class="period">08/2020 – 05/2024</span><h4>Mavo-diploma</h4><p>Zuid-West College, Den Haag</p></li>
+                    </ul>
+                </section>
+                <section class="card">
+                    <h3>Projecten</h3>
+                    <ul class="timeline">
+                        <li><h4><a href="hogerLager.html">Hoger of lager</a></h4><p>Een spel met levens, munten en achtergrondmuziek, gemaakt met HTML, CSS en JavaScript.</p></li>
+                        <li><h4><a href="tictactoe.html">Tic Tac Toe</a></h4><p>Een spel voor twee spelers met namen en score, gemaakt met HTML, CSS en JavaScript.</p></li>
+                        <li><h4>Deze portfolio-website</h4><p>Een responsive website met cv, projectpagina en contactgegevens.</p></li>
+                    </ul>
+                </section>
+                <section class="card">
+                    <h3>Werkervaring &amp; extra's</h3>
+                    <!-- Vul dit aan: bijbaan, stage, vrijwilligerswerk, cursussen, hobby's -->
+                    <p>Hier kun je bijbanen, vrijwilligerswerk, cursussen of hobby's toevoegen.</p>
+                </section>
+                <section class="card">
+                    <h3>Persoonlijke gegevens</h3>
+                    <p><strong>Leeftijd:</strong> 17 jaar</p>
+                    <p><strong>Woonplaats:</strong> Den Haag</p>
+                    <p><strong>Beschikbaarheid:</strong> naast mijn opleiding</p>
+                    <p><strong>Referenties:</strong> op aanvraag beschikbaar</p>
+                </section>
+                <section class="card">
+                    <h3>Interesses</h3>
+                    <!-- Pas aan naar je eigen interesses en hobby's -->
+                    <ul class="tags"><li>Webontwikkeling</li><li>Games bouwen</li><li>Nieuwe technieken leren</li></ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">© 2026 Hemzah Kariman · Software Developer in opleiding</footer>
 </body>
 </html>
